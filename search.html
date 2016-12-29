@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script type="text/javascript">
+		function get_key () 
+		{
+			var y;
+			var x=document.getElementById('sbox').value;
+			localStorage.setItem("y", x);
+			return true;
+		}
+	</script>
+	
+	<style type="text/css">
+	body
+	{ 
+	  background: url(images/background_image.jpg) no-repeat center center fixed; 
+	  background-size: 100vw 100vh;
+	  margin: 0px;
+	  padding: 0px;
+	  font-family: 'Raleway', sans-serif;
+	}
+	.wrapper
+	{
+		width: 100%;
+		height: 100%;
+		padding:215px 0px;
+	}
+	.heading
+	{
+		width: 886px;
+		padding: 10px 0px;
+		border: 5px solid black;
+		background-color: rgba(255,255,255,0.84);
+		margin: 0px auto;
+		text-align: center;
+		color:#008057;
+		/*font-weight: bold;*/
+		font-size: 30px;
+		overflow: auto;
+	}
+	.heading p
+	{
+		margin-top: 40px;
+		font-weight: bold;
+	}
+	#sbox
+	{
+		height:42px;
+		font-size: 20px;
+		width :380px;
+	}
+	.btn
+	{
+		width: 90px;
+		height: 45px;
+		color: white;
+		background-color: #008057;
+		border: 2px solid white;
+		border-radius: 6px;
+		margin-top: 20px;
+		font-weight: bold;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="heading">
+			<p>Discover the Twitter sentiment for a product or brand.</p>
+			<form  name="search" action="/cgi-bin/Naive_Bayes.py" method="GET">
+				<div><input type="text" placeholder="Enter your keyword" id="sbox" name="searchbox"></div>
+				<div><input type="submit" class=" btn btn-lg" value="Search" onsubmit=" return get_key()"> </div>
+			</form>
+		</form>
+		</div>
+	</div>
+
+</body>
+</html>
