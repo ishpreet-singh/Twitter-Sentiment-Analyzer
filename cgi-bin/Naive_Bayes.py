@@ -246,5 +246,5 @@ def Sentiment_Analyzer():
     
 if __name__ == '__main__':
     Sentiment_Analyzer()
-    url="http://localhost/search_result_1.php?data="+cgi.FieldStorage().getvalue('searchbox')
+    url="http://localhost/search_result.php?data="+cgi.FieldStorage().getvalue('searchbox')
     webbrowser.open(url,new=0, autoraise=True)

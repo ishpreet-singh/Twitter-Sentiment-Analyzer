@@ -1,6 +1,6 @@
 <?php
 $key=$_GET['data'];
-$url = "C:\Users\hp1\Desktop\Sentiment_Analyzer";
+$url = "C:\Sahib\Git workspace\Workspace\projects\Sentiment_Analyzer";
 $images = glob($url."\data\Result_Fetched_Tweets_".$key."*",GLOB_BRACE);
 foreach($images as $image)
  {$fill= basename($image);} 
